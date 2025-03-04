@@ -1,5 +1,19 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"]
+  "compilerOptions": {
+    "strict": true, // Asegura que todas las opciones estrictas estén habilitadas
+    "noImplicitAny": true, // No permite variables de tipo 'any' implícito
+    "strictNullChecks": true, // Prohibir uso incorrecto de 'null' y 'undefined'
+    "noUnusedLocals": true, // Desactiva variables no usadas
+    "noUnusedParameters": true, // Desactiva parámetros no utilizados en funciones
+    "noImplicitReturns": true, // Prohibir funciones sin valor de retorno explícito
+    "noFallthroughCasesInSwitch": true // Impide que los casos del switch caigan entre sí sin break
+  },
+  "include": [
+    ".astro/types.d.ts",
+    "**/*"
+  ],
+  "exclude": [
+    "dist"
+  ]
 }
